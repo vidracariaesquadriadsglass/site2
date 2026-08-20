@@ -1,6 +1,6 @@
 /* ============================================
    DS Glasses - Sistema de Design Premium
-   Versão Completa e Corrigida
+   Versão Final Corrigida
    ============================================ */
 
 :root {
@@ -20,7 +20,6 @@
     --section-padding-mobile: 64px;
 }
 
-/* Reset e Base */
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +60,6 @@ ul {
     margin: 0;
 }
 
-/* Container */
 .container {
     width: 100%;
     max-width: var(--container-max);
@@ -69,18 +67,15 @@ ul {
     padding: 0 20px;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
+/* HEADER */
 .site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     width: 100%;
 }
 
@@ -88,7 +83,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 15px 20px;
     width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
@@ -98,14 +93,14 @@ ul {
 .brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     flex-shrink: 0;
 }
 
 .brand-mark {
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 800;
+    font-size: 26px;
     color: var(--primary-color);
     letter-spacing: -1px;
     line-height: 1;
@@ -113,10 +108,10 @@ ul {
 
 .brand-text {
     font-family: var(--font-heading);
-    font-weight: 500;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 13px;
     color: var(--text-main);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -126,7 +121,7 @@ ul {
 
 .nav-list {
     display: flex;
-    gap: 32px;
+    gap: 28px;
     list-style: none;
     align-items: center;
 }
@@ -168,7 +163,6 @@ ul {
     flex-shrink: 0;
 }
 
-/* Botões */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -240,7 +234,6 @@ ul {
     width: 100%;
 }
 
-/* Menu Mobile */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -283,7 +276,6 @@ ul {
     transition: right 0.4s ease;
     padding: 80px 20px 40px;
     overflow-y: auto;
-    display: block;
 }
 
 .mobile-menu.active {
@@ -293,7 +285,6 @@ ul {
 .mobile-nav-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
 }
 
 .mobile-nav-link {
@@ -301,21 +292,15 @@ ul {
     font-weight: 500;
     color: var(--text-main);
     padding: 15px 0;
-    border-bottom: 1px solid var(--neutral);
+    border-bottom: 1px solid #eee;
     display: block;
-}
-
-.mobile-nav-link:hover {
-    color: var(--primary-color);
 }
 
 .mobile-cta {
     margin-top: 25px;
 }
 
-/* ============================================
-   HERO
-   ============================================ */
+/* HERO */
 .hero {
     position: relative;
     height: 85vh;
@@ -348,7 +333,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(6, 42, 66, 0.7), rgba(6, 42, 66, 0.5));
+    background: linear-gradient(to bottom, rgba(6, 42, 66, 0.75), rgba(6, 42, 66, 0.5));
 }
 
 .hero-content {
@@ -366,7 +351,7 @@ ul {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: var(--accent-color);
     margin-bottom: 15px;
     border-left: 3px solid var(--accent-color);
@@ -383,14 +368,10 @@ ul {
     display: inline-block;
 }
 
-.eyebrow-light {
-    color: var(--accent-color);
-}
-
 .hero-title {
     font-family: var(--font-heading);
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.15;
     margin-bottom: 20px;
     max-width: 700px;
@@ -411,9 +392,7 @@ ul {
     flex-wrap: wrap;
 }
 
-/* ============================================
-   SEÇÕES
-   ============================================ */
+/* SEÇÕES */
 .section {
     padding: var(--section-padding-desktop) 0;
     width: 100%;
@@ -445,9 +424,7 @@ ul {
     line-height: 1.6;
 }
 
-/* ============================================
-   SEÇÃO SOBRE
-   ============================================ */
+/* SOBRE */
 .about-grid {
     display: grid;
     grid-template-columns: 45% 55%;
@@ -455,27 +432,16 @@ ul {
     align-items: center;
 }
 
-.about-image {
-    position: relative;
-    overflow: hidden;
-}
-
 .about-image img {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.03);
 }
 
 .about-content h2 {
     font-family: var(--font-heading);
     font-size: 36px;
     font-weight: 700;
-    color: var(--text-main);
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -484,43 +450,26 @@ ul {
     color: var(--text-light);
     margin-bottom: 18px;
     line-height: 1.7;
-    font-size: 16px;
 }
 
-/* ============================================
-   SEÇÃO SERVIÇOS / FEATURES
-   ============================================ */
+/* FEATURES */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
 }
 
-.feature-card {
-    background: var(--white);
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
 .feature-card-image {
     height: 250px;
     overflow: hidden;
     margin-bottom: 20px;
-    background-color: var(--neutral);
+    background-color: #f0f0f0;
 }
 
 .feature-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.feature-card:hover .feature-card-image img {
-    transform: scale(1.05);
 }
 
 .feature-card h3 {
@@ -528,42 +477,25 @@ ul {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--text-main);
-    line-height: 1.3;
 }
 
 .feature-card p {
     color: var(--text-light);
     margin-bottom: 14px;
     line-height: 1.6;
-    font-size: 15px;
 }
 
 .text-link {
     color: var(--primary-color);
     font-weight: 600;
     font-size: 14px;
-    position: relative;
-    display: inline-block;
-}
-
-.text-link::after {
-    content: '→';
-    margin-left: 6px;
-    transition: margin-left 0.3s ease;
 }
 
 .text-link:hover {
     color: var(--accent-color);
 }
 
-.text-link:hover::after {
-    margin-left: 10px;
-}
-
-/* ============================================
-   SEÇÃO DIFERENCIAIS
-   ============================================ */
+/* DIFERENCIAIS */
 .differentials {
     background-color: var(--primary-color);
     color: var(--white);
@@ -593,55 +525,45 @@ ul {
     font-size: 42px;
     font-weight: 800;
     color: var(--accent-color);
-    margin-bottom: 12px;
     display: block;
+    margin-bottom: 12px;
 }
 
 .differential-item h3 {
     font-size: 17px;
     font-weight: 600;
-    margin-bottom: 8px;
     color: var(--white);
-    line-height: 1.3;
+    margin-bottom: 8px;
 }
 
 .differential-item p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
-    line-height: 1.5;
 }
 
-/* ============================================
-   CONTEÚDO SEO
-   ============================================ */
+/* SEO */
 .conteudo-seo {
     background-color: #f8f9fa;
     padding: 80px 0;
 }
 
 .conteudo-seo h2 {
-    font-family: var(--font-heading);
     font-size: 32px;
     font-weight: 700;
-    color: var(--text-main);
     margin-bottom: 25px;
-    line-height: 1.3;
 }
 
 .conteudo-seo h3 {
-    font-family: var(--font-heading);
     font-size: 22px;
     font-weight: 600;
     color: var(--primary-color);
     margin: 25px 0 12px;
-    line-height: 1.3;
 }
 
 .conteudo-seo p {
     color: var(--text-light);
     margin-bottom: 18px;
     line-height: 1.8;
-    font-size: 16px;
 }
 
 .conteudo-seo ul {
@@ -653,12 +575,9 @@ ul {
 .conteudo-seo li {
     color: var(--text-light);
     margin-bottom: 10px;
-    line-height: 1.6;
 }
 
-/* ============================================
-   INTERLINKING OTIMIZADO
-   ============================================ */
+/* INTERLINKING */
 .interlinking {
     padding: 80px 0;
     background-color: #f8f9fa;
@@ -669,25 +588,10 @@ ul {
     margin-bottom: 50px;
 }
 
-.interlinking-header .eyebrow {
-    display: block;
-    margin-bottom: 10px;
-}
-
 .interlinking-header h2 {
-    font-family: var(--font-heading);
     font-size: 36px;
     font-weight: 700;
-    color: var(--text-main);
     margin-bottom: 12px;
-    line-height: 1.2;
-}
-
-.interlinking-header p {
-    font-size: 16px;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .interlinking-grid {
@@ -701,20 +605,12 @@ ul {
     border: 1px solid #e8e8e8;
     border-left: 4px solid var(--primary-color);
     padding: 25px;
-    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.interlinking-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-left-color: var(--accent-color);
-}
-
 .interlinking-category {
-    display: inline-block;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -724,113 +620,64 @@ ul {
 }
 
 .interlinking-card h3 {
-    font-family: var(--font-heading);
     font-size: 18px;
     font-weight: 600;
-    color: var(--text-main);
     margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-.interlinking-card h3 a {
-    color: var(--text-main);
-    transition: color 0.3s ease;
-}
-
-.interlinking-card h3 a:hover {
-    color: var(--primary-color);
 }
 
 .interlinking-card p {
     font-size: 14px;
     color: var(--text-light);
-    line-height: 1.6;
     margin-bottom: 15px;
     flex-grow: 1;
 }
 
 .interlinking-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     font-size: 13px;
     font-weight: 600;
     color: var(--primary-color);
-    transition: all 0.3s ease;
 }
 
-.interlinking-cta::after {
-    content: '→';
-    transition: transform 0.3s ease;
-}
-
-.interlinking-card:hover .interlinking-cta {
-    color: var(--accent-color);
-}
-
-.interlinking-card:hover .interlinking-cta::after {
-    transform: translateX(5px);
-}
-
-/* ============================================
-   CONTATO
-   ============================================ */
+/* CONTATO */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    align-items: start;
 }
 
 .contact-info h2 {
-    font-family: var(--font-heading);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--text-main);
-    line-height: 1.2;
 }
 
 .contact-sub {
     font-size: 17px;
     color: var(--primary-color);
-    font-weight: 500;
     margin-bottom: 25px;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
 }
 
 .contact-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-}
-
-.contact-icon {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-}
-
-.contact-item span {
+    gap: 10px;
+    font-size: 15px;
     color: var(--text-light);
-    line-height: 1.5;
+}
+
+.contact-item strong {
+    color: var(--text-main);
+    min-width: 80px;
 }
 
 .contact-item a {
     color: var(--text-main);
-    font-weight: 500;
-    line-height: 1.5;
 }
 
 .contact-item a:hover {
@@ -838,10 +685,9 @@ ul {
 }
 
 .map-container {
-    background-color: var(--neutral);
+    background-color: #f0f0f0;
     height: 450px;
     overflow: hidden;
-    width: 100%;
 }
 
 .map-container iframe {
@@ -850,9 +696,7 @@ ul {
     border: none;
 }
 
-/* ============================================
-   BOTÃO WHATSAPP CTA
-   ============================================ */
+/* BOTÃO WHATSAPP */
 .whatsapp-cta-btn {
     display: inline-flex;
     align-items: center;
@@ -863,32 +707,11 @@ ul {
     padding: 14px 28px;
     font-size: 15px;
     font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
     margin-top: 20px;
-    width: auto;
     max-width: 280px;
     text-decoration: none;
-    border-radius: 0;
-    letter-spacing: 0.5px;
-}
-
-.whatsapp-cta-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.whatsapp-cta-btn:hover::before {
-    left: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .whatsapp-cta-btn:hover {
@@ -900,12 +723,9 @@ ul {
     width: 20px;
     height: 20px;
     fill: var(--white);
-    flex-shrink: 0;
 }
 
-/* ============================================
-   CTA FINAL
-   ============================================ */
+/* CTA FINAL */
 .final-cta {
     background-color: var(--dark-color);
     color: var(--white);
@@ -914,11 +734,9 @@ ul {
 }
 
 .final-cta h2 {
-    font-family: var(--font-heading);
     font-size: 38px;
     font-weight: 800;
     margin-bottom: 18px;
-    line-height: 1.2;
 }
 
 .final-cta p {
@@ -927,39 +745,24 @@ ul {
     margin-bottom: 35px;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER */
 .site-footer {
     background-color: var(--dark-color);
     color: rgba(255, 255, 255, 0.8);
-    padding: 70px 0 0;
-    width: 100%;
+    padding: 60px 0 0;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
-    padding-bottom: 45px;
-}
-
-.footer-brand .brand {
-    margin-bottom: 18px;
-}
-
-.footer-brand .brand-mark {
-    color: var(--white);
-}
-
-.footer-brand .brand-text {
-    color: var(--white);
+    padding-bottom: 40px;
 }
 
 .footer-brand p {
     font-size: 14px;
-    line-height: 1.6;
     color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
 }
 
 .footer-col h4 {
@@ -967,18 +770,6 @@ ul {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 18px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-col h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: var(--accent-color);
 }
 
 .footer-col ul {
@@ -989,7 +780,6 @@ ul {
 
 .footer-col li {
     font-size: 14px;
-    line-height: 1.5;
 }
 
 .footer-col a {
@@ -1028,13 +818,7 @@ ul {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.legal-links a:hover {
-    color: var(--accent-color);
-}
-
-/* ============================================
-   WHATSAPP FLUTUANTE
-   ============================================ */
+/* WHATSAPP FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -1048,12 +832,6 @@ ul {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-float svg {
@@ -1062,352 +840,48 @@ ul {
     fill: var(--white);
 }
 
-/* ============================================
-   ANIMAÇÕES
-   ============================================ */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-    
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-/* ============================================
-   RESPONSIVO - TABLET
-   ============================================ */
+/* RESPONSIVO */
 @media (min-width: 1025px) {
-    .main-nav {
-        display: block;
-    }
-    
-    .hamburger {
-        display: none;
-    }
-    
-    .mobile-menu {
-        display: none;
-    }
+    .main-nav { display: block; }
+    .hamburger { display: none; }
+    .mobile-menu { display: none; }
 }
 
 @media (max-width: 1024px) {
-    .main-nav {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    
-    .about-image img {
-        height: 350px;
-    }
-    
-    .differentials-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
-    }
-    
-    .hero-title {
-        font-size: 42px;
-    }
-    
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-    
-    .section-heading h2 {
-        font-size: 34px;
-    }
-    
-    .final-cta h2 {
-        font-size: 34px;
-    }
-    
-    .section {
-        padding: var(--section-padding-tablet) 0;
-    }
-    
-    .interlinking-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .interlinking-header h2 {
-        font-size: 30px;
-    }
+    .main-nav { display: none; }
+    .hamburger { display: flex; }
+    .about-grid { grid-template-columns: 1fr; gap: 35px; }
+    .about-image img { height: 350px; }
+    .differentials-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-title { font-size: 42px; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .section-heading h2 { font-size: 34px; }
+    .section { padding: var(--section-padding-tablet) 0; }
+    .interlinking-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ============================================
-   RESPONSIVO - MOBILE
-   ============================================ */
 @media (max-width: 767px) {
-    .container {
-        padding: 0 16px;
-    }
-    
-    .header-inner {
-        padding: 12px 16px;
-    }
-    
-    .brand-mark {
-        font-size: 22px;
-    }
-    
-    .brand-text {
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
-    
-    .btn-small {
-        padding: 8px 14px;
-        font-size: 12px;
-    }
-    
-    .section {
-        padding: var(--section-padding-mobile) 0;
-    }
-    
-    .hero {
-        height: 90vh;
-        min-height: 480px;
-    }
-    
-    .hero-content {
-        padding: 0 16px;
-    }
-    
-    .hero-subtitle {
-        font-size: 11px;
-        letter-spacing: 1.5px;
-        padding-left: 10px;
-        margin-bottom: 12px;
-    }
-    
-    .hero-title {
-        font-size: 32px;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-    
-    .hero-desc {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 25px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-    }
-    
-    .btn {
-        padding: 14px 24px;
-        font-size: 15px;
-    }
-    
-    .btn-lg {
-        padding: 15px 28px;
-        font-size: 15px;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .feature-card-image {
-        height: 220px;
-    }
-    
-    .feature-card h3 {
-        font-size: 19px;
-    }
-    
-    .differentials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .differential-item {
-        padding: 15px;
-    }
-    
-    .differential-number {
-        font-size: 36px;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-bottom-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .legal-links {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .about-content h2 {
-        font-size: 28px;
-    }
-    
-    .section-heading {
-        margin-bottom: 35px;
-        padding: 0 10px;
-    }
-    
-    .section-heading h2 {
-        font-size: 28px;
-    }
-    
-    .section-intro {
-        font-size: 15px;
-    }
-    
-    .final-cta {
-        padding: 60px 0;
-    }
-    
-    .final-cta h2 {
-        font-size: 28px;
-    }
-    
-    .final-cta p {
-        font-size: 15px;
-    }
-    
-    .conteudo-seo {
-        padding: 50px 0;
-    }
-    
-    .conteudo-seo h2 {
-        font-size: 24px;
-    }
-    
-    .conteudo-seo h3 {
-        font-size: 19px;
-    }
-    
-    .conteudo-seo p {
-        font-size: 15px;
-    }
-    
-    .contact-info h2 {
-        font-size: 26px;
-    }
-    
-    .map-container {
-        height: 350px;
-    }
-    
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .whatsapp-float svg {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .interlinking {
-        padding: 60px 0;
-    }
-    
-    .interlinking-header {
-        margin-bottom: 35px;
-    }
-    
-    .interlinking-header h2 {
-        font-size: 26px;
-    }
-    
-    .interlinking-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-    
-    .interlinking-card {
-        padding: 20px;
-    }
-    
-    .interlinking-card h3 {
-        font-size: 17px;
-    }
-    
-    .whatsapp-cta-btn {
-        padding: 14px 24px;
-        font-size: 14px;
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .whatsapp-cta-btn svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .site-header {
-        background-color: var(--white);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-}
-
-/* ============================================
-   RESPONSIVO - TELAS MUITO PEQUENAS
-   ============================================ */
-@media (max-width: 360px) {
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .brand-mark {
-        font-size: 20px;
-    }
-    
-    .btn-small {
-        padding: 6px 10px;
-        font-size: 11px;
-    }
+    .container { padding: 0 16px; }
+    .header-inner { padding: 12px 16px; }
+    .brand-mark { font-size: 22px; }
+    .brand-text { font-size: 10px; }
+    .section { padding: var(--section-padding-mobile) 0; }
+    .hero { height: 90vh; min-height: 480px; }
+    .hero-title { font-size: 32px; }
+    .hero-desc { font-size: 15px; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { width: 100%; }
+    .features-grid { grid-template-columns: 1fr; }
+    .differentials-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom-inner { flex-direction: column; text-align: center; }
+    .about-content h2 { font-size: 28px; }
+    .section-heading h2 { font-size: 28px; }
+    .final-cta h2 { font-size: 28px; }
+    .contact-info h2 { font-size: 26px; }
+    .map-container { height: 350px; }
+    .interlinking-grid { grid-template-columns: 1fr; }
+    .whatsapp-cta-btn { max-width: 100%; width: 100%; }
 }
